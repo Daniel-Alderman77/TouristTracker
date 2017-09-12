@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ReviewsViewController.swift
 //  TouristTracker
 //
 //  Created by Daniel Alderman on 12/09/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ReviewsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

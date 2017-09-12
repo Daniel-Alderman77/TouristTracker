@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  MapViewController.swift
 //  TouristTracker
 //
 //  Created by Daniel Alderman on 12/09/2017.
@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MapKit
 
-class SecondViewController: UIViewController {
+class MapViewController: UIViewController {
+    @IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,7 @@
 		E6488E401F686790007252B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6488E3E1F686790007252B1 /* LaunchScreen.storyboard */; };
 		E6488E4B1F686791007252B1 /* TouristTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6488E4A1F686791007252B1 /* TouristTrackerTests.swift */; };
 		E6488E561F686791007252B1 /* TouristTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6488E551F686791007252B1 /* TouristTrackerUITests.swift */; };
+		E67280E91F6EB66F002880FD /* UpdateLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67280E81F6EB66F002880FD /* UpdateLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E6488E511F686791007252B1 /* TouristTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouristTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6488E551F686791007252B1 /* TouristTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristTrackerUITests.swift; sourceTree = "<group>"; };
 		E6488E571F686791007252B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E67280E81F6EB66F002880FD /* UpdateLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E6488E3C1F686790007252B1 /* Assets.xcassets */,
 				E6488E3E1F686790007252B1 /* LaunchScreen.storyboard */,
 				E6488E411F686790007252B1 /* Info.plist */,
+				E67280E81F6EB66F002880FD /* UpdateLocation.swift */,
 			);
 			path = TouristTracker;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				E6488E381F686790007252B1 /* ReviewsViewController.swift in Sources */,
 				E6488E341F686790007252B1 /* AppDelegate.swift in Sources */,
 				E6488E361F686790007252B1 /* MapViewController.swift in Sources */,
+				E67280E91F6EB66F002880FD /* UpdateLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

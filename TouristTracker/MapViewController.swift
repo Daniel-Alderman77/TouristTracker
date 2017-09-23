@@ -33,14 +33,28 @@ class MapViewController: UIViewController {
         didSet {
             let manager = getManager() // Gets the locManager
             let locArray = updateLocation.getLocation(manager, didUpdateLocations: ["" as AnyObject]) // Gets the array with lat and lon
-            mapView.mapType = .satellite // Type of map is a satellite one
+            mapView.mapType = .standard // Type of map is a satellite one
             mapView.isPitchEnabled = false
             let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(locArray[0] as! NSNumber), longitude: CLLocationDegrees(locArray[1] as! NSNumber)) // Using the lat and lon and converting them to NSNumbers
             let region = MKCoordinateRegionMakeWithDistance(location, 1000.0, 1000.0)
             mapView.setRegion(region, animated: true)
-            let dropPin = MKPointAnnotation() // Create a drop pin
-            dropPin.coordinate = location // Drop pin should be at the current location
-            mapView.addAnnotation(dropPin) // Drop pin being placed
+            
+            let request = MKLocalSearchRequest()
+            request.naturalLanguageQuery = "Restaurants"
+            request.region = mapView.region
+            
+            let search = MKLocalSearch(request: request)
+            search.start { response, error in
+                guard let response = response else {
+                    print("There was an error searching for: \(String(describing: request.naturalLanguageQuery)) error: \(String(describing: error))")
+                    return
+                }
+                
+                for item in response.mapItems {
+                    // Display the received items
+                    print(item)
+                }
+            }
         }
     }
 }

@@ -33,7 +33,7 @@ class MapViewController: UIViewController {
         didSet {
             let manager = getManager() // Gets the locManager
             let locArray = updateLocation.getLocation(manager, didUpdateLocations: ["" as AnyObject]) // Gets the array with lat and lon
-            mapView.mapType = .standard // Type of map is a satellite one
+            mapView.mapType = .standard // Specify map type
             mapView.isPitchEnabled = false
             let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(locArray[0] as! NSNumber), longitude: CLLocationDegrees(locArray[1] as! NSNumber)) // Using the lat and lon and converting them to NSNumbers
             let region = MKCoordinateRegionMakeWithDistance(location, 1000.0, 1000.0)
